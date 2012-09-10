@@ -1,0 +1,32 @@
+{
+	"posts": [
+		{
+			"id": 3,
+			"posted_by": "Anton",
+			"liked_post": 2,
+			"fallback": {
+				"text": "Anton liked Michael's post: \"This is my face when I understood bilby.js\"",
+				"link": "/image/2"
+			}
+		},
+		{
+			"id": 2,
+			"posted_by": "Michael",
+			"new_image": "img/ohai.jpeg",
+			"description": "This is my face when I understood bilby.js",
+			"fallback": {
+				"text": "Michael posted a new image: \"This is my face when I understood bilby.js\"",
+				"image": "img/ohai.jpeg",
+				"link": "img/ohai.jpeg"
+			}
+		},
+		{
+			"id": 1,
+			"posted_by": "Anton",
+			"status_update": "Learning bilby.js and polymorphism!",
+			"fallback": {
+				"text": "Anton updated his status: \"Learning bilby.js and polymorphism!\""
+			}
+		}
+	]
+}

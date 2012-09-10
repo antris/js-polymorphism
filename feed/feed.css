@@ -1,0 +1,17 @@
+body {
+	font-family: Helvetica;
+	font-size: 18px;
+	background: #eee;
+}
+h1 {
+	margin: 0;
+}
+body > h1 {
+	color: #1166cc;
+}
+.feed section {
+	background: #fff;
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em 0;
+}
