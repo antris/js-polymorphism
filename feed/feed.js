@@ -31,12 +31,20 @@
 
 	var render = curry(Mustache.to_html);
 
-	var makeMethod = function(env, type) {
+	// Feedmaker environment
+	// ---------------------
+	// Create methods to generate HTML for each feed type.
+	// Type is determined by the type.condition function.
+
+	var feedMaker = feedTypes.reduce(function(env, type) {
 		return env.method('html', type.condition, render(type.template));
-	};
+	}, bilby.environment());
 
-	var feedMaker = feedTypes.reduce(makeMethod, bilby.environment());
+	// We now have a feedMaker environment with one polymorphic method - [Function: feedMaker.html]
+	// - which returns html rendered with the correct type of template, determined by going through
+	// all given type.conditions.
 
+	// Run data through feedMaker and append output HTML to #feed
 	var addToFeed = function(data) { $("#feed").append(data.posts.map(feedMaker.html)); };
 
 	var data_url = '/feed/data/feed.json'; // Test feed with only known types
