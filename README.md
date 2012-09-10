@@ -9,4 +9,4 @@ But how do we manage this complexity?
 ### Try the demo:
 
 1. `python -m SimpleHTTPServer`
-2. Point your browser to `http://127.0.0.1:8000/feed/`
+2. Point your browser to [http://127.0.0.1:8000/feed/](http://127.0.0.1:8000/feed/)
